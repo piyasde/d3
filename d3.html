@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html ng-app="AngularD3BarGraph">
+<title>Angular D3 Bar Graph</title>
+<meta charset="utf-8">
+<style>
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
+}
+</style>
+<body>
+<div id="d3bar" angulard3-bar-graph datajson="'sample.json'" xaxis-name = "'Year'" xaxis-pos = "905" yaxis-name = "'Frequency'" yaxis-pos = "6" d3-format= "'.0%'"  ></div>
+</body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script src="angulard3bargraph.js"></script>
+</html>
